@@ -1,0 +1,14 @@
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\bin\Debug\net9.0\Gerenciador-Tarefas.exe
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\bin\Debug\net9.0\Gerenciador-Tarefas.deps.json
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\bin\Debug\net9.0\Gerenciador-Tarefas.runtimeconfig.json
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\bin\Debug\net9.0\Gerenciador-Tarefas.dll
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\bin\Debug\net9.0\Gerenciador-Tarefas.pdb
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerenciador-Tarefas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerenciador-Tarefas.AssemblyInfoInputs.cache
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerenciador-Tarefas.AssemblyInfo.cs
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerenciador-Tarefas.csproj.CoreCompileInputs.cache
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerenciador-Tarefas.dll
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\refint\Gerenciador-Tarefas.dll
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerenciador-Tarefas.pdb
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerenciador-Tarefas.genruntimeconfig.cache
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\ref\Gerenciador-Tarefas.dll
