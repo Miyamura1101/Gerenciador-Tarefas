@@ -1,16 +1,27 @@
 ﻿using System.Data;
 using System.Globalization;
 using Gerenciador_Tarefas.Models;
+using Newtonsoft.Json;
 
 string op = " ";
 bool FinaliarPrograma = true;
 
-List<Tarefa> ListaDeTerefasPendentes = new List<Tarefa>();
-Stack<Tarefa> ListaDeTaredasRealizadas = new Stack<Tarefa>();
+List<Tarefa> ListaDeTerefas = new List<Tarefa>();
+
+if (File.Exists("Arquivos/tarefas.json"))
+{
+    Console.WriteLine("Deseja pegar os dados salvos(N/Y):");
+    string save = Console.ReadLine().ToUpper();
+
+    if (save == "Y")
+    {
+        string ListaTarefasArquivo = File.ReadAllText("Arquivos/tarefas.json");
+        ListaDeTerefas = JsonConvert.DeserializeObject<List<Tarefa>>(ListaTarefasArquivo);
+    }
+}
 
 do
 {
-
     Console.WriteLine("[1] Adicionar Tarefa");
     Console.WriteLine("[2] Remover Tarefa");
     Console.WriteLine("[3] Visualizar Tarefas Pendentes");
@@ -28,37 +39,42 @@ do
 
             if (novaTarefa != null)
             {
-                ListaDeTerefasPendentes.Add(novaTarefa);
+                ListaDeTerefas.Add(novaTarefa);
                 Console.WriteLine("Tarefa inserida com sucesso");
             }
             else
             {
                 Console.WriteLine("A terefa não foi inicializada devido a um erro ");
             }
-                break;
+            break;
         case "2":
             string nomeTarefa;
 
-            Tarefa.VisualizarTabelaPendentes(ListaDeTerefasPendentes);
+            Tarefa.VisualizarTabelaPendentes(ListaDeTerefas);
 
             Console.WriteLine("\nDigite o nome da tarefa que será apagada: ");
             nomeTarefa = Console.ReadLine();
 
-            Tarefa.RemoverTaredaPeloNome(nomeTarefa, ListaDeTerefasPendentes);
+            Tarefa.RemoverTaredaPeloNome(nomeTarefa, ListaDeTerefas);
 
             break;
         case "3":
 
-            Tarefa.VisualizarTabelaPendentes(ListaDeTerefasPendentes);
-            
+            Tarefa.VisualizarTabelaPendentes(ListaDeTerefas);
+
             break;
         case "4":
 
             break;
         case "5":
-        
+
             break;
         case "6":
+
+            string output = JsonConvert.SerializeObject(ListaDeTerefas, Formatting.Indented);
+
+            File.WriteAllText("Arquivos/tarefas.json", output);
+
             FinaliarPrograma = false;
             break;
         default:

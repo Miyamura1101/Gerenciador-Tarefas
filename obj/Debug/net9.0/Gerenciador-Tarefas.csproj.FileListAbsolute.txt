@@ -12,3 +12,7 @@ C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\refint\Gerencia
 C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerenciador-Tarefas.pdb
 C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerenciador-Tarefas.genruntimeconfig.cache
 C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\ref\Gerenciador-Tarefas.dll
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerenciador-Tarefas.csproj.AssemblyReference.cache
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerenciador-Tarefas.sourcelink.json
+C:\Users\felip\Documents\C#\Gerenciador-Tarefas\obj\Debug\net9.0\Gerencia.955B5FA4.Up2Date
