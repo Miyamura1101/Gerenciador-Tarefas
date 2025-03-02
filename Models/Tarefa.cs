@@ -14,9 +14,9 @@ namespace Gerenciador_Tarefas.Models
             Prioridade = prioridade;
 
         }
-        private string _nomeTarefa;
+        private string _nomeTarefa = " ";
         private DateTime _dataVencimento;
-        private string _prioridade;
+        private string _prioridade = " ";
 
         public string NomeTarefa
         {
@@ -67,18 +67,13 @@ namespace Gerenciador_Tarefas.Models
                 Console.Write("Digite o nome da tarefa: ");
                 string nome = Console.ReadLine() ?? string.Empty;
 
-                DateTime DataVenciomento;
-                do
+                Console.Write("Digite a data de vencimento (dd/MM/yyyy): ");
+                string inputData = Console.ReadLine() ?? string.Empty;
+
+                if (!DateTime.TryParseExact(inputData, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime DataVenciomento))
                 {
-                    Console.Write("Digite a data de vencimento (dd/MM/yyyy): ");
-                    string inputData = Console.ReadLine() ?? string.Empty;
-
-                    if (!DateTime.TryParseExact(inputData, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DataVenciomento))
-                    {
-                        break;
-                    }
-
-                } while (true);
+                  throw new ArgumentException("Data Inválida, user o formato dd/MM/yyyy");
+                }
 
                 string prioridade = " ";
                 do
@@ -88,15 +83,16 @@ namespace Gerenciador_Tarefas.Models
                         Console.WriteLine("As unicas opções são Alta / Media / Baixa");
                     }
 
-                    Console.Write("Escolha a Prioridade: ");
-                    Console.Write("- Alta");
-                    Console.Write("- Media");
-                    Console.Write("- Baixa");
+                    Console.WriteLine("Escolha a Prioridade: ");
+                    Console.WriteLine("- Alta");
+                    Console.WriteLine("- Media");
+                    Console.WriteLine("- Baixa");
 
-                    prioridade = Console.ReadLine()!.ToUpper();
+                    prioridade = Console.ReadLine().ToUpper();
 
-                } while (prioridade != "ALTA" || prioridade != "MEDIA" || prioridade != "BAIXA");
+                } while (prioridade != "ALTA" && prioridade != "MEDIA" && prioridade != "BAIXA");
 
+                Console.WriteLine($"Tarefa criada com sucesso!!!");
 
                 return new Tarefa(nome, DataVenciomento, prioridade);
             }
@@ -134,7 +130,6 @@ namespace Gerenciador_Tarefas.Models
                 Console.WriteLine($"Data de vencimento (dd/MM/yyyy): {item.DataVencimento}");
                 Console.WriteLine($"Prioridade: {item.Prioridade}\n");
             }
-            Console.Read();
         }
     }
 }
