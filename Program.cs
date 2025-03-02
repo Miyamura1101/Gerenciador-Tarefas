@@ -55,7 +55,7 @@ do
             Console.WriteLine("\nDigite o nome da tarefa que será apagada: ");
             nomeTarefa = Console.ReadLine();
 
-            Tarefa.RemoverTaredaPeloNome(nomeTarefa, ListaDeTerefas);
+            Tarefa.RemoverTarefaPeloNome(nomeTarefa, ListaDeTerefas);
 
             break;
         case "3":

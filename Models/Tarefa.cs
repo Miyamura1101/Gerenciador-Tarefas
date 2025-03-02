@@ -107,20 +107,20 @@ namespace Gerenciador_Tarefas.Models
             }
         }
 
-        public static void RemoverTaredaPeloNome(string nome, List<Tarefa> ListaTarefas)
+        public static void RemoverTarefaPeloNome(string nome, List<Tarefa> ListaTarefas)
         {
-            Tarefa tarefaASerRemovida = null;
-            foreach (Tarefa item in ListaTarefas)
-            {
-                if (item.NomeTarefa == nome)
-                {
-                    tarefaASerRemovida = item;
-                }
-            }
+            //FirstOrDefault -> serve para procurar algo na lista e se achar não vai até o final da lista
+            Tarefa tarefaASerRemovida = ListaTarefas.FirstOrDefault(item => (item.NomeTarefa == nome))!;
 
             if (tarefaASerRemovida != null)
             {
+                Console.WriteLine("Tarefa romivada");
                 ListaTarefas.Remove(tarefaASerRemovida);
+                
+            }
+            else
+            {
+                Console.WriteLine("A terefa que foi passada não existe!!!");
             }
         }
 
